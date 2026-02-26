@@ -61,13 +61,10 @@ while coffee_machine:
 
             if total_money >= cost_of_coffee:
                 resources["profit"] += cost_of_coffee
-                if 'milk' not in coffee_ingredinets:
-                    resources["water"] = resources['water'] - coffee_ingredinets['water']
-                    resources["coffee"] = resources['coffee'] - coffee_ingredinets['coffee']
-                else:
-                    resources["water"] = resources['water'] - coffee_ingredinets['water']
-                    resources["coffee"] = resources['coffee'] - coffee_ingredinets['coffee']
-                    resources["milk"] = resources['milk'] - coffee_ingredinets['milk']
+               
+                resources["water"] = resources['water'] - coffee_ingredinets['water']
+                resources["coffee"] = resources['coffee'] - coffee_ingredinets['coffee']
+                resources["milk"] = resources['milk'] - coffee_ingredinets['milk']
 
                 if total_money > cost_of_coffee:
                     print(f"Here is your ${total_money - cost_of_coffee} change")
@@ -91,10 +88,6 @@ while coffee_machine:
         print(f"Milk: {resources["milk"]}ml")
         print(f"Coffee: {resources["coffee"]}g")
         print(f"Money: ${resources["profit"]}")
-
-
-
-
 
 
 
