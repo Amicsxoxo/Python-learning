@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../chima"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "chima"
+	}
+}

@@ -1,0 +1,42 @@
+import random
+import turtle
+
+
+tim = turtle.Turtle()
+
+color_list = [ (199, 162, 100), (62, 91, 128), (140, 170, 192), (139, 90, 48), (219, 206, 119), (135, 27, 52), (32, 41, 67), (78, 16, 36), (149, 59, 85), (167, 154, 49), (187, 143, 162), (134, 183, 147), (46, 55, 100), (181, 95, 107), (56, 39, 27), (96, 118, 167), (80, 150, 159), (89, 152, 92), (71, 118, 93), (220, 175, 187), (169, 207, 163), (161, 202, 215), (192, 95, 74), (178, 187, 213), (46, 73, 75), (76, 69, 44)]
+
+turtle.colormode(255)
+tim.speed(0)
+
+
+def color_dots():
+  color = random.choice(color_list)
+  tim.pendown()
+  tim.color(color)
+  tim.begin_fill()
+  tim.circle(10)
+  tim.end_fill()
+
+
+tim.penup()
+
+x = -300
+y = -300
+
+tim.goto(x, y)
+
+for _ in range(10):
+  y += 50
+  tim.goto(x,y)
+  for _ in range(10):
+    color_dots()
+    tim.penup()
+    tim.forward(50)
+
+
+
+
+
+
+turtle.Screen().exitonclick()
