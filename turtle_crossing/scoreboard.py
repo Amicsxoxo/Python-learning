@@ -16,4 +16,10 @@ class Scoreboard(Turtle):
     self.score += 1
     self.clear()
     self.write(f"Level: {self.score}" ,align= "center" , font= FONT)
+
+  def restart(self):
+    self.score = 0
+    self.clear()
+    self.write(f"Level: {self.score}" ,align= "center" , font= FONT)
+
     

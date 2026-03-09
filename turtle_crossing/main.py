@@ -9,16 +9,25 @@ screen = Screen()
 screen.setup(width=600, height= 600)
 screen.tracer(0)
 
-carmanger = CarManager()
+car_manger = CarManager()
 scoreboard = Scoreboard()
 player = Player()
+
+
 
 game_is_on = True
 while game_is_on:
   time.sleep(0.1)
   screen.update()
-  for _ in range(random.randint(1,12)):
-    carmanger.car_creation()
+  car_manger.car_creation()
+  car_manger.car_move()
+
+
+  for cars in car_manger.all_cars:
+    if player.distance(cars) < 20:
+      player.restart()
+      car_manger.reset_car()
+      scoreboard.restart()
 
 
   screen.listen()
@@ -31,7 +40,12 @@ while game_is_on:
   if player.ycor() > FINISH_LINE_Y:
     scoreboard.update()
     player.restart()
+    car_manger.reset_car()
+    car_manger.move_increase()
 
+  
+  
+  
 
 
 screen.exitonclick()
