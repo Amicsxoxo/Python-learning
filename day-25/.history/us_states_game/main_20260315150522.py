@@ -1,0 +1,33 @@
+import turtle
+import pandas
+
+
+data = pandas.read_csv("us_states_game/50_states.csv")
+screen = turtle.Screen()
+screen.title("U.S. States Game")
+
+tim = turtle.Turtle()
+tim.penup()
+tim.hideturtle()
+
+image = "us_states_game/blank_states_img.gif"
+screen.addshape(image)
+turtle.shape(image)
+
+answer_state = ""
+answer_state = (screen.textinput(title= "Guess a State!" ,prompt= "Whats another states nane? ")).title()
+
+
+
+for answer_state in data:
+  print("answer_state")
+  state = data[data == answer_state]
+  print(state)
+  xcor = state.x
+  ycor = state.y
+
+  print(xcor, ycor)
+  tim.goto(xcor,ycor)
+  tim.write( arg=answer_state ,align= "center" , font= ("Arial", 8, "normal")) 
+
+screen.exitonclick()

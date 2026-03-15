@@ -1,0 +1,3 @@
+data
+
+with open("./weather_data.csv") as file:
