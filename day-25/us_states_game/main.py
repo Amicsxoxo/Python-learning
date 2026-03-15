@@ -28,6 +28,11 @@ while counter() != 50:
   answer_state = (screen.textinput(title= f"{counter()}/50 Guess a State!" ,prompt= "Whats another states nane? ")).title()
 
   if answer_state == "Exit":
+    missed_states = {"states" : []}
+    learning_data = [state for state in states_data if state not in states_gotten]
+    missed_states["states"] = learning_data
+    data = pandas.DataFrame(missed_states)
+    data.to_csv("us_states_game/states_to_learn")
     break
 
   if answer_state in states_data:
@@ -39,13 +44,8 @@ while counter() != 50:
       tim.write( arg=answer_state ,align= "center" , font= ("Arial", 8, "normal"))
       states_gotten.append(answer_state)
     
-missed_states = {"states" : []}
-for state in states_gotten:
-  if state in states_data:
-    states_data.remove(state)
 
-missed_states["states"] = states_data
-data = pandas.DataFrame(missed_states)
-data.to_csv("us_states_game/states_to_learn")
+
+
 
 screen.exitonclick()
