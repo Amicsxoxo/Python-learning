@@ -47,7 +47,7 @@ today = datetime.now()
 
 #Graph update url endpoint
 graph_update = f"{graph_endpoint}/graph1"
-
+print(graph_update)
 #Graph update json
 graph_update_config = {
   "date" : today.strftime("%Y%m%d"),
