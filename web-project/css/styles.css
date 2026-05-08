@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  text-align: center;
+  font-family: "Merriweather", serif;
+  line-height: 2;
+  padding-bottom: 0;
+  color: #40514E;
+}
+
+.top-container {
+  background-color: #e9f9f5;
+  padding-top: 100px;
+  margin-bottom: 30px;
+}
+.top-cloud {
+  position: absolute;
+  right: 300px;
+  top: 40px;
+}
+
+.bottom-cloud {
+  position: absolute;
+  bottom: 300px;
+  left: 250px;
+}
+
+.computer-img-1{
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+.computer-img-2{
+  width: 25%;
+  float: right;
+  margin-left: 30px;
+}
+.programmer {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 5.625rem; 
+  /* 100% font size is equal to 16px is equal to 1 em */
+  margin: 30px auto 0;
+  font-family: "Sacramento", cursive;
+  color: #66BFBF;
+}
+
+.about{
+  display: inline-block;
+  width: 30%;  
+  color: #40514E;
+}
+
+p {
+  line-height: 1.5;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  color: #66BFBF;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  color: #11999E;
+}
+
+.skill-row {
+  display: inline-block;
+  width: 50%;
+  margin: 100px auto;
+  text-align: left;
+  line-height: 2;
+}
+
+
+hr{
+  border-style: dotted;
+  border-width: 7px 0 0 0;
+  width: 5%;
+  border-color: #EAF6F6;
+}
+
+.bottom-container {
+  padding-top: 40px;
+  margin-top: 50px;
+  background-color: #66BFBF;
+  padding-bottom: 20px;
+}
+
+.footer-link {
+  color: #11999E;
+  margin: 20px;
+  padding-bottom: 20px;
+  text-decoration: none;
+}
+
+.footer-link:hover{
+  color: #e9f9f5;
+}
+.btn {
+  font-family: "Poppins", sans-serif;
+  background-color: #11999E;
+  border: none;
+  padding: 10px;
+  border-radius: 7px;
+  margin: 100px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+
+  }
+
+.btn:hover {
+  background-color: #66BFBF;
+  cursor:pointer;
+}
+
+.last-text {
+  font-family: "Poppins", sans-serif;
+  color: #EAF6F6;
+  font-size: .75rem;
+}
+/* Display is for block, inline, none it describes how things are displayed on the screeen, inline-block doesn't take the whole line it just inherits the properties of the two*/
+/* Position describes how things are positioned relative to its former position, it's parent element and so on */
+/* Padding works within the border and margin works outside the boreder */
+/* Text-align aligns the text in the div container */
+/* Line height increases the vertical distance between two texts */
+/* font size the size of the font in (% , em, rem) */
+/* Color is the color of the text in the parent tag */
+/* margin: 100px auto it centralizes the text */
+/* Font-family is the type of font to use including the backup fonts */
+/* Float pushes the element to the desired position and lets the remaining elements wrap around it */
+/* If you don't want the other elements to wrap around the floated element just use clear, it works like an anti float. You say clear :"the position of the float" */
