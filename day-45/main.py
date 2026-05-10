@@ -38,3 +38,5 @@ company_url = soup.select_one(selector="p a")
 # The selector is your css selector it can be compounded, it can also accept class like #classname, id as in .idname
 print(company_url.get("href"))
 # Printing the companys url href
+
+
